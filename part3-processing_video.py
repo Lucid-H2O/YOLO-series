@@ -5,7 +5,7 @@ import time
 
 option = {
     'model': 'cfg/yolo.cfg',
-    'load': 'bin/yolo.weights',
+    'load': 'bin/yolov2.weights',
     'threshold': 0.15,
     'gpu': 1.0
 }
@@ -13,7 +13,7 @@ option = {
 tfnet = TFNet(option)
 
 capture = cv2.VideoCapture('videofile_1080_20fps.avi')
-colors = [tuple(255 * np.random.rand(3)) for i in range(5)]
+colors = [tuple(255 * np.random.rand(3)) for i in range(25)]
 
 while (capture.isOpened()):
     stime = time.time()
